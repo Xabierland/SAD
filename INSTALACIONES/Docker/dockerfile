@@ -1,0 +1,28 @@
+FROM ubuntu:22.04
+ARG UID=1000
+ARG GID=1000
+
+# Crear usuario no root
+RUN apt update && \
+    apt install -y sudo && \
+    addgroup --gid $GID nonroot && \
+    adduser --uid $UID --gid $GID --disabled-password --gecos "" nonroot && \
+    echo 'nonroot ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+
+# Cambiar a usuario no root
+USER nonroot
+WORKDIR /home/nonroot
+
+# Descagar Dataiku
+RUN sudo apt-get install -y wget
+RUN wget https://cdn.downloads.dataiku.com/public/dss/11.3.2/dataiku-dss-11.3.2.tar.gz
+RUN tar xzf dataiku-dss-11.3.2.tar.gz
+
+# Instalar Dataiku
+RUN mkdir $HOME/.dataiku
+RUN mv dataiku-dss-11.3.2 $HOME/.dataiku-dss-11.3.2
+RUN yes | sudo -i "$HOME/.dataiku-dss-11.3.2/scripts/install/install-deps.sh"
+RUN $HOME/.dataiku-dss-11.3.2/installer.sh -d $HOME/.dataiku -p 11000
+
+# Iniciar Dataiku
+CMD $HOME/.dataiku/bin/dss start; sleep infinity
