@@ -6,7 +6,6 @@
   - [¿Como validamos nuestros modelos/algoritmos?](#como-validamos-nuestros-modelosalgoritmos)
     - [Ejercicio - ¿Que son los epochs?](#ejercicio---que-son-los-epochs)
     - [Ejercicio - ¿Calcular las metricas?](#ejercicio---calcular-las-metricas)
-  - [Letura y visionado de vídeos](#letura-y-visionado-de-vídeos)
 
 ## Objetivos de Aprendizaje
 
@@ -68,5 +67,3 @@ Segunda aproximación - Aprobado con &
 * Precision - 99%
 * Recall - 100%
 * F-Score - 99.49%
-
-## Letura y visionado de vídeos
