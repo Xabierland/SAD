@@ -14,6 +14,8 @@ Apuntes, ejercicios y practicas de la asignatura de Sistemas de Apoyo a la Decis
   - [Tema 4 - kNN](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_4)
   - [Tema 5 - Arboles de decision](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_5)
   - [Tema 6 - Naive Bayes](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_6)
+  - [Tema 7 - Análisis de Sentimientos](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_7)
+  - [Tema 8 - Topic Modeling](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_8)
 - Practicas
   - [Practica 1 - Preprocesado de datos](https://github.com/Xabierland/SAD/tree/main/PRACTICAS/PRACTICA_1)
   - [Practica 2 - Evaluacion](https://github.com/Xabierland/SAD/tree/main/PRACTICAS/PRACTICA_2)
