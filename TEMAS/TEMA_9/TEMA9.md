@@ -251,7 +251,7 @@ La coherencia C_V usa la Puntuación de Información Mutua Normalizada (NMPI) pa
 
 La formula de la coherencia C_V es:
 
-$\text{coherencia C\_V} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NMPI}(w_i, w_j)$
+$\text{coherencia CV} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NMPI}(w_i, w_j)$
 
 Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NMPI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j$.
 
