@@ -46,12 +46,12 @@ docker run hello-world
 ```bash
 wget https://raw.githubusercontent.com/Xabierland/SAD/main/INSTALACIONES/Docker/dockerfile
 docker build -t dataiku-dss-11.3.2 .
-docker run -p 11000:11000 -dit --name dataiku dataiku-dss-11.3.2
+docker run -p 11000:11000 -dit --restart unless-stopped --name dataiku dataiku-dss-11.3.2
 
 ```
 
 ### Usando MI imagen de Dataiku de Docker Hub
 
 ```bash
-docker run -p 11000:11000 -dit --name dataiku xabierland/dataiku-dss-11.3.2
+docker run -p 11000:11000 -dit --restart unless-stopped --name dataiku xabierland/dataiku-dss-11.3.2
 ```
