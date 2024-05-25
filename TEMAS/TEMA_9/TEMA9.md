@@ -109,7 +109,7 @@ El algoritmo K-means es un método efectivo y simple para la agrupación de dato
 ## Nearest Neighbors
 
 > [!NOTE]
-> Estoy todavia redactando esta parte y a la espera de que me responda un correo Aitziber.
+> Estoy todavia redactando esta parte y a la espera de que me responda un correo Aitziber porque creo que el algoritmo de Nearest Neighbors no se puede aplicar a clustering. Y que el algoritmo que se nos explico en clase es el de Jerarquico Aglomerativo.
 
 El algoritmo de Vecinos Más Cercanos (Nearest Neighbors) es ampliamente conocido por su uso en clasificación y regresión. Sin embargo, también puede ser aplicado en el contexto de clustering.
 
