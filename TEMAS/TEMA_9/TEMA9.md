@@ -1,5 +1,6 @@
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD029 -->
 # Topic Modeling <!-- omit in toc -->
 
 - [Introducción](#introducción)
@@ -18,7 +19,7 @@
 
 # Introducción
 
-El `topic modeling` es:
+El Topic Modeling es:
 
 > Aplicación de algoritmos de agrupamiento/clustering no supervisados con objeto de identificar automaticamente los temas subyacentes en textos.
 
@@ -107,31 +108,75 @@ El algoritmo K-means es un método efectivo y simple para la agrupación de dato
 
 ## Nearest Neighbors
 
+> [!NOTE]
+> Estoy todavia redactando esta parte y a la espera de que me responda un correo Aitziber.
+
 El algoritmo de Vecinos Más Cercanos (Nearest Neighbors) es ampliamente conocido por su uso en clasificación y regresión. Sin embargo, también puede ser aplicado en el contexto de clustering.
 
-### Objetivo <!-- omit in toc -->
+### Algoritmo Nearest Neighbors <!-- omit in toc -->
+
+#### Objetivo <!-- omit in toc -->
 
 El objetivo del clustering mediante Nearest Neighbors es agrupar datos en clusters basándose en la proximidad de los puntos de datos entre sí.
+
+#### Pasos del Algoritmo <!-- omit in toc -->
+
+
+
+#### Limitaciones <!-- omit in toc -->
+
+- El algoritmo de Vecinos Más Cercanos puede ser computacionalmente costoso, especialmente en conjuntos de datos grandes.
+- La búsqueda de vecinos más cercanos puede ser lenta en dimensiones altas debido a la [maldición de la dimensionalidad](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
+  - Se pueden utilizar técnicas de reducción de dimensionalidad para abordar este problema.
 
 # Metodos suaves <!-- omit in toc -->
 
 ## LDA
 
-- Latent Dirichlet Allocation
-- Modelo generativo (como Naive Bayes)
-- Busca maximizar la probabilidad de que los documentos sean generados por los temas
-  - Teniendo en cuenta la probabilidad de que los temas generen las palabras
-  - Y la probabilidad de que los documentos generen las palabras
-- Funcionamiento
-  - Un documento es la distribucion de temas/topicos
+### Algoritmo LDA <!-- omit in toc -->
+
+#### Objetivo <!-- omit in toc -->
+
+El objetivo del algoritmo LDA (Latent Dirichlet Allocation) es descubrir los temas subyacentes en un conjunto de documentos.
+
+LDA se basa en la suposición de que los documentos son generados por una mezcla de temas, y que cada tema es una distribución de palabras. El objetivo de LDA es inferir la distribución de temas en los documentos y la distribución de palabras en los temas.
+
+#### Pasos del Algoritmo <!-- omit in toc -->
+
+1. **Inicialización**:
+   - Inicializar aleatoriamente las distribuciones de temas y palabras en los documentos.
+2. **Inferencia Variacional**:
+   - Se trata de encontrar las distribuciones de temas y palabras que mejor explican los datos observados.
+   1. **Definir la distribución variacional**
+     - Se define una familia de distribuciones variacionales que aproximan la distribución posterior de los temas y palabras.
+   2. **Optimizar los parámetros variacional**
+     - Se ajustan los parámetros de la distribución variacional para maximizar la probabilidad de los datos observados.
+3. **Evaluar la Convergencia**:
+   - Se evalúa la convergencia del algoritmo bien mediante ELBO o mediante la coherencia de los temas.
+4. **Obtener las Distribuciones Posteriores**:
+   - Una vez que se ha alcanzado la convergencia, se obtienen las distribuciones posteriores de temas y palabras en los documentos.
+5. **Inferir los Temas en los Documentos**:
+    - Se asignan los temas a los documentos en función de las distribuciones posteriores obtenidas.
+
+#### Limitaciones <!-- omit in toc -->
+
+- Computacionalmente intratable, demasiado costoso.
 
 ## LDA - Gibbs Sampling
 
-- Algoritmo de muestreo de Gibbs
-- Funcionamiento
-  - Se asigna aleatoriamente un tema a cada palabra
-  - Se actualiza la asignacion de temas de cada palabra
-  - Se repite el proceso hasta que converja
+### Algoritmo LDA - Gibbs Sampling <!-- omit in toc -->
+
+#### Objetivo <!-- omit in toc -->
+
+El algoritmo LDA (Latent Dirichlet Allocation) con Gibbs Sampling es una técnica de aprendizaje no supervisado utilizada para descubrir los temas subyacentes en un conjunto de documentos.
+
+La diferencia con el algoritmo LDA estándar es que en lugar de utilizar métodos de optimización como la inferencia variacional, LDA con Gibbs Sampling utiliza un enfoque de muestreo de Gibbs para estimar las distribuciones de temas y palabras en los documentos.
+
+#### Pasos del Algoritmo <!-- omit in toc -->
+
+
+
+#### Limitaciones <!-- omit in toc -->
 
 # Metricas de valoración
 
@@ -178,7 +223,7 @@ Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el
 
 La puntuación de co-ocurrencia se calcula como:
 
-$\text{score}(w_i, w_j) = \log \frac{P(w_i, w_j) + 1}{P(w_i)}$
+$\text{score}(w_i, w_j) = \log \frac{P(w_i, w_j) + \epsilon}{P(w_i)}$
 
 Donde $P(w_i, w_j)$ es la probabilidad de co-ocurrencia de las palabras $w_i$ y $w_j$, y $P(w_i)$ es la probabilidad de la palabra $w_i$.
 
@@ -196,7 +241,7 @@ Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el
 
 Este PMI se calcula como:
 
-$\text{PMI}(w_i, w_j) = \log \frac{P(w_i, w_j)}{P(w_i)P(w_j)}$
+$\text{PMI}(w_i, w_j) = \log \frac{P(w_i, w_j)+\epsilon}{P(w_i)P(w_j)}$
 
 ### C_V
 
@@ -208,10 +253,16 @@ La formula de la coherencia C_V es:
 
 $\text{coherencia C\_V} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NMPI}(w_i, w_j)$
 
-Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NMPI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j`.
+Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NMPI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j$.
 
 La puntuación de co-ocurrencia normalizada se calcula como:
 
-$\text{NMPI}(w_i, w_j) = \frac{\text{PMI}(w_i, w_j)}{-\log P(w_i, w_j)}$
+$\text{NMPI}(w_i, w_j) = \frac{\text{PMI}(w_i, w_j)}{-\log P(w_i, w_j) + \epsilon}$
+
+o
+
+$\text{NMPI}(w_i, w_j) = \frac{\log \frac{P(w_i, w_j)+\epsilon}{P(w_i)P(w_j)}}{-\log P(w_i, w_j) + \epsilon}$
 
 Donde $\text{PMI}(w_i, w_j)$ es la puntuación de co-ocurrencia de las palabras $w_i$ y $w_j$, y $P(w_i, w_j)$ es la probabilidad de co-ocurrencia de las palabras $w_i$ y $w_j$.
+
+> Mas informacion sobre NMPI [aquí](./.files/Full-Text_or_Abstract_Examining_Topic_Coherence_Scores_Using_Latent_Dirichlet_Allocation.pdf)
