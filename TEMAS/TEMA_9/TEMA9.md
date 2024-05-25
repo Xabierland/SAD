@@ -117,17 +117,9 @@ El algoritmo de Vecinos Más Cercanos (Nearest Neighbors) es ampliamente conocid
 
 #### Objetivo <!-- omit in toc -->
 
-El objetivo del clustering mediante Nearest Neighbors es agrupar datos en clusters basándose en la proximidad de los puntos de datos entre sí.
-
 #### Pasos del Algoritmo <!-- omit in toc -->
 
-
-
 #### Limitaciones <!-- omit in toc -->
-
-- El algoritmo de Vecinos Más Cercanos puede ser computacionalmente costoso, especialmente en conjuntos de datos grandes.
-- La búsqueda de vecinos más cercanos puede ser lenta en dimensiones altas debido a la [maldición de la dimensionalidad](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
-  - Se pueden utilizar técnicas de reducción de dimensionalidad para abordar este problema.
 
 # Metodos suaves <!-- omit in toc -->
 
