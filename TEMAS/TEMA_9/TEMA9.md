@@ -239,22 +239,22 @@ $\text{PMI}(w_i, w_j) = \log \frac{P(w_i, w_j)+\epsilon}{P(w_i)P(w_j)}$
 
 La coherencia C_V (C_V Cohesion Coherence) es una métrica de coherencia que evalúa la relación semántica entre las palabras en un tema.
 
-La coherencia C_V usa la Puntuación de Información Mutua Normalizada (NMPI) para medir la co-ocurrencia de las palabras en un tema. La NMPI es una medida de la relación entre dos palabras basada en la probabilidad de que aparezcan juntas en un texto.
+La coherencia C_V usa la Puntuación de Información Mutua Normalizada (NPMI) para medir la co-ocurrencia de las palabras en un tema. La NPMI es una medida de la relación entre dos palabras basada en la probabilidad de que aparezcan juntas en un texto.
 
 La formula de la coherencia C_V es:
 
-$\text{coherencia CV} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NMPI}(w_i, w_j)$
+$\text{coherencia CV} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NPMI}(w_i, w_j)$
 
-Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NMPI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j$.
+Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NPMI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j$.
 
 La puntuación de co-ocurrencia normalizada se calcula como:
 
-$\text{NMPI}(w_i, w_j) = \frac{\text{PMI}(w_i, w_j)}{-\log P(w_i, w_j) + \epsilon}$
+$\text{NPMI}(w_i, w_j) = \frac{\text{PMI}(w_i, w_j)}{-\log P(w_i, w_j) + \epsilon}$
 
 o
 
-$\text{NMPI}(w_i, w_j) = \frac{\log \frac{P(w_i, w_j)+\epsilon}{P(w_i)P(w_j)}}{-\log P(w_i, w_j) + \epsilon}$
+$\text{NPMI}(w_i, w_j) = \frac{\log \frac{P(w_i, w_j)+\epsilon}{P(w_i)P(w_j)}}{-\log P(w_i, w_j) + \epsilon}$
 
 Donde $\text{PMI}(w_i, w_j)$ es la puntuación de co-ocurrencia de las palabras $w_i$ y $w_j$, y $P(w_i, w_j)$ es la probabilidad de co-ocurrencia de las palabras $w_i$ y $w_j$.
 
-> Mas informacion sobre NMPI [aquí](./.files/Full-Text_or_Abstract_Examining_Topic_Coherence_Scores_Using_Latent_Dirichlet_Allocation.pdf)
+> Mas informacion sobre NPMI [aquí](./.files/Full-Text_or_Abstract_Examining_Topic_Coherence_Scores_Using_Latent_Dirichlet_Allocation.pdf)
