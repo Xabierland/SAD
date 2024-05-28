@@ -133,27 +133,6 @@ El objetivo del algoritmo LDA (Latent Dirichlet Allocation) es descubrir los tem
 
 LDA se basa en la suposición de que los documentos son generados por una mezcla de temas, y que cada tema es una distribución de palabras. El objetivo de LDA es inferir la distribución de temas en los documentos y la distribución de palabras en los temas.
 
-#### Pasos del Algoritmo <!-- omit in toc -->
-
-1. **Inicialización**:
-   - Inicializar aleatoriamente las distribuciones de temas y palabras en los documentos.
-2. **Inferencia Variacional**:
-   - Se trata de encontrar las distribuciones de temas y palabras que mejor explican los datos observados.
-   1. **Definir la distribución variacional**
-     - Se define una familia de distribuciones variacionales que aproximan la distribución posterior de los temas y palabras.
-   2. **Optimizar los parámetros variacional**
-     - Se ajustan los parámetros de la distribución variacional para maximizar la probabilidad de los datos observados.
-3. **Evaluar la Convergencia**:
-   - Se evalúa la convergencia del algoritmo bien mediante ELBO o mediante la coherencia de los temas.
-4. **Obtener las Distribuciones Posteriores**:
-   - Una vez que se ha alcanzado la convergencia, se obtienen las distribuciones posteriores de temas y palabras en los documentos.
-5. **Inferir los Temas en los Documentos**:
-    - Se asignan los temas a los documentos en función de las distribuciones posteriores obtenidas.
-
-#### Limitaciones <!-- omit in toc -->
-
-- Computacionalmente intratable, demasiado costoso.
-
 ## [LDA - Gibbs Sampling](https://www.youtube.com/watch?v=BaM1uiCpj_E)
 
 ### Algoritmo LDA - Gibbs Sampling <!-- omit in toc -->
@@ -163,12 +142,6 @@ LDA se basa en la suposición de que los documentos son generados por una mezcla
 El algoritmo LDA (Latent Dirichlet Allocation) con Gibbs Sampling es una técnica de aprendizaje no supervisado utilizada para descubrir los temas subyacentes en un conjunto de documentos.
 
 La diferencia con el algoritmo LDA estándar es que en lugar de utilizar métodos de optimización como la inferencia variacional, LDA con Gibbs Sampling utiliza un enfoque de muestreo de Gibbs para estimar las distribuciones de temas y palabras en los documentos.
-
-#### Pasos del Algoritmo <!-- omit in toc -->
-
-
-
-#### Limitaciones <!-- omit in toc -->
 
 # Metricas de valoración
 
