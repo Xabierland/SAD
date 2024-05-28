@@ -123,7 +123,7 @@ El algoritmo de Vecinos Más Cercanos (Nearest Neighbors) es ampliamente conocid
 
 # Metodos suaves <!-- omit in toc -->
 
-## LDA
+## [LDA](https://www.youtube.com/watch?v=T05t-SqKArY)
 
 ### Algoritmo LDA <!-- omit in toc -->
 
@@ -154,7 +154,7 @@ LDA se basa en la suposición de que los documentos son generados por una mezcla
 
 - Computacionalmente intratable, demasiado costoso.
 
-## LDA - Gibbs Sampling
+## [LDA - Gibbs Sampling](https://www.youtube.com/watch?v=BaM1uiCpj_E)
 
 ### Algoritmo LDA - Gibbs Sampling <!-- omit in toc -->
 
