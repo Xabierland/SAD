@@ -113,14 +113,6 @@ El algoritmo K-means es un método efectivo y simple para la agrupación de dato
 
 El algoritmo de Vecinos Más Cercanos (Nearest Neighbors) es ampliamente conocido por su uso en clasificación y regresión. Sin embargo, también puede ser aplicado en el contexto de clustering.
 
-### Algoritmo Nearest Neighbors <!-- omit in toc -->
-
-#### Objetivo <!-- omit in toc -->
-
-#### Pasos del Algoritmo <!-- omit in toc -->
-
-#### Limitaciones <!-- omit in toc -->
-
 # Metodos suaves <!-- omit in toc -->
 
 ## [LDA](https://www.youtube.com/watch?v=T05t-SqKArY)
@@ -182,7 +174,7 @@ La coherencia U-MASS se calcula como la suma de las puntuaciones de coherencia d
 
 La formula de la coherencia U-MASS es:
 
-$\text{coherencia U-MASS} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{score}(w_i, w_j)$
+$\text{coherencia U-MASS} = \frac{2}{N(N-1)} \sum_{i=1}^{n} \sum_{j=1}^{n} \text{score}(w_i, w_j)$
 
 Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{score}(w_i, w_j)$ es la puntuación de co-ocurrencia de las palabras $w_i$ y $w_j$.
 
@@ -200,7 +192,7 @@ La coherencia UCI usa la Puntuación de Información Mutua (PMI) para medir la c
 
 La formula de la coherencia UCI es:
 
-$\text{coherencia UCI} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{PMI}(w_i, w_j)$
+$\text{coherencia UCI} = \frac{2}{N(N-1)} \sum_{i=1}^{n} \sum_{j=1}^{n} \text{PMI}(w_i, w_j)$
 
 Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{PMI}(w_i, w_j)$ es la puntuación de co-ocurrencia de las palabras $w_i$ y $w_j$.
 
@@ -216,7 +208,7 @@ La coherencia C_V usa la Puntuación de Información Mutua Normalizada (NPMI) pa
 
 La formula de la coherencia C_V es:
 
-$\text{coherencia CV} = \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NPMI}(w_i, w_j)$
+$\text{coherencia CV} = \frac{2}{N(N-1)} \sum_{i=1}^{n} \sum_{j=1}^{n} \text{NPMI}(w_i, w_j)$
 
 Donde $n$ es el número de palabras en el tema, $w_i$ y $w_j$ son palabras en el tema, y $\text{NPMI}(w_i, w_j)$ es la puntuación de co-ocurrencia normalizada de las palabras $w_i$ y $w_j$.
 
