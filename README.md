@@ -19,7 +19,6 @@ Apuntes, ejercicios y practicas de la asignatura de Sistemas de Apoyo a la Decis
     - [Tema 7 - Visualizacion](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_7)
     - [Tema 8 - Análisis de Sentimientos](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_8)
     - [Tema 9 - Topic Modeling](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_9)
-    - [Tema 10 - Tableau](https://github.com/Xabierland/SAD/tree/main/TEMAS/TEMA_10)
 - Practicas
   - [Practica 1 - Preprocesado de datos](https://github.com/Xabierland/SAD/tree/main/PRACTICAS/PRACTICA_1)
   - [Practica 2 - Evaluacion](https://github.com/Xabierland/SAD/tree/main/PRACTICAS/PRACTICA_2)
